@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-breadcrumb",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Breadcrumb component for Vue Bulma",
   "main": "src/Breadcrumb.vue",
   "devDependencies": {

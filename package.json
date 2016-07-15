@@ -1,0 +1,22 @@
+{
+  "name": "vue-bulma-breadcrumb",
+  "version": "0.0.0",
+  "description": "Breadcrumb component for Vue Bulma",
+  "main": "src/Breadcrumb.vue",
+  "devDependencies": {
+    "bulma": "0.1.0",
+    "vue": "1.0.26"
+  },
+  "scripts": {},
+  "repository": "git+https://github.com/vue-bulma/breadcrumb.git",
+  "keywords": [
+    "vue",
+    "bulma",
+    "vue-bulma",
+    "vue-bulma-component",
+    "vue-bulma-breadcrumb",
+    "breadcrumb"
+  ],
+  "author": "Fangdun Cai <cfddream@gmail.com>",
+  "license": "MIT"
+}

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
 export default {
 
   props: {
@@ -16,13 +17,14 @@ export default {
       default: () => []
     },
     separator: {
-      type: String,
-      default: '/\00a0'
+      type: String
     }
   },
 
   ready () {
-    this.$el.style.setProperty('--separator', this.separator)
+    if (this.separator) {
+      this.$el.style.setProperty('--separator', `"${this.separator}"`)
+    }
   },
 
   methods: {
@@ -35,7 +37,9 @@ export default {
 
 <style lang="scss">
 .breadcrumb {
-  --separator: '/\00a0';
+  // > \003e
+  // / \2044
+  --separator: "\2044";
 
   list-style: none;
   align-items: center;
@@ -45,7 +49,7 @@ export default {
   & > li + li:before {
     padding: 0 5px;
     color: #ccc;
-    content: var(--separator);
+    content: var(--separator, "\2044");
   }
 }
 </style>

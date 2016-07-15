@@ -14,7 +14,15 @@ export default {
       type: Array,
       required: true,
       default: () => []
+    },
+    separator: {
+      type: String,
+      default: '/\00a0'
     }
+  },
+
+  ready () {
+    this.$el.style.setProperty('--separator', this.separator)
   },
 
   methods: {

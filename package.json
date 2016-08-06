@@ -4,8 +4,8 @@
   "description": "Breadcrumb component for Vue Bulma",
   "main": "src/Breadcrumb.vue",
   "peerDependencies": {
-    "bulma": "0.1.0",
-    "vue": "1.0.26"
+    "bulma": "^0.1",
+    "vue": "^2"
   },
   "scripts": {},
   "repository": "git+https://github.com/vue-bulma/breadcrumb.git",

@@ -10,6 +10,46 @@ $ npm install vue-bulma-breadcrumb
 
 ## Examples
 
+```vue
+<template>
+  <nav class="level app-levelbar">
+    <div class="level-left">
+      <div class="level-item">
+        <h3 class="subtitle is-5">
+          <strong>{{ name }}</strong>
+        </h3>
+      </div>
+    </div>
+
+    <div class="level-right is-hidden-mobile">
+      <breadcrumb :list="list"><breadcrumb>
+    </div>
+  </nav>
+</template>
+
+<script>
+import Breadcrumb from 'vue-bulma-breadcrumb'
+
+export default {
+  components: {
+    Breadcrumb
+  },
+
+  data () {
+    return {
+      list: []
+    }
+  },
+
+  computed: {
+    name () {
+      return this.$route.name
+    }
+  }
+}
+</script>
+```
+
 ## Badges
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -17,7 +57,7 @@ $ npm install vue-bulma-breadcrumb
 
 ---
 
-> [fundon.me](https://fundun.me) &nbsp;&middot;&nbsp;
+> [fundon.me](https://fundon.me) &nbsp;&middot;&nbsp;
 > GitHub [@fundon](https://github.com/fundon) &nbsp;&middot;&nbsp;
 > Twitter [@_fundon](https://twitter.com/_fundon)
 

@@ -1,13 +1,12 @@
 <template>
   <ol class="breadcrumb">
-    <li v-for="item in list"><span class="active" v-if="isLast($index)">{{item.label}}</span>
-      <a v-link="{ name: item.link }" v-else>{{item.label}}</a>
+    <li v-for="(item, index) in list"><span class="active" v-if="isLast(index)">{{ item.name }}</span>
+      <a v-link="{ name: item.path }" v-else>{{ item.name }}</a>
     </li>
   </ol>
 </template>
 
 <script>
-
 export default {
 
   props: {

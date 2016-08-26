@@ -1,7 +1,7 @@
 <template>
   <ol class="breadcrumb">
-    <li v-for="(item, index) in list"><span class="active" v-if="isLast(index)">{{ item.name }}</span>
-      <a v-link="{ name: item.path }" v-else>{{ item.name }}</a>
+    <li v-for="(item, index) in list"><span class="active" v-if="isLast(index)">{{ showName(item) }}</span>
+      <router-link :to="item.path" v-else>{{ showName(item) }}</a>
     </li>
   </ol>
 </template>
@@ -15,12 +15,10 @@ export default {
       required: true,
       default: () => []
     },
-    separator: {
-      type: String
-    }
+    separator: String
   },
 
-  ready () {
+  mounted () {
     if (this.separator) {
       this.$el.style.setProperty('--separator', `"${this.separator}"`)
     }
@@ -29,6 +27,10 @@ export default {
   methods: {
     isLast (index) {
       return index === this.list.length - 1
+    },
+
+    showName (item) {
+      return item.meta && item.meta.label || item.name
     }
   }
 }

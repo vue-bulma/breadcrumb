@@ -4,12 +4,11 @@
   "description": "Breadcrumb component for Vue Bulma",
   "main": "src/Breadcrumb.vue",
   "peerDependencies": {
-    "bulma": "^0.2",
-    "vue": ">=2.0.0-beta.0",
-	"vue-router": ">=v2.0.0"
+    "bulma": ">=0.2",
+    "vue": ">=2",
+    "vue-router": ">=2"
   },
-  "scripts": {},
-  "repository": "git+https://github.com/vue-bulma/breadcrumb.git",
+  "repository": "vue-bulma/breadcrumb",
   "keywords": [
     "vue",
     "bulma",
